@@ -46,10 +46,17 @@
   }
   .nomeprin{
     position: absolute;
-    left: 220px;
+    left: 221px;
     top: 65px;
-    text-align: center;
   }
+  .nomeprin h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(8, 0, 0);
+    font-family: 'Roboto';
+  }
+
   .sobremim {
     width:900px;
     height: 300px;

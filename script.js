@@ -69,4 +69,6 @@ function adicionarImagem() {
   };
 
   input.click();
+  
 }
+
