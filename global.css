@@ -37,7 +37,7 @@
     font-weight: bold;
     color: white;
     font-family: 'Roboto';
-    cursor: pointer;
+    overflow: hidden;
   }
   .quadrado img {
     width: 100%;

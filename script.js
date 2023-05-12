@@ -42,6 +42,29 @@ function adicionarImagem() {
       };
 
       reader.readAsDataURL(file);
+    } else if (file.type.includes('gif')) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const gif = new Image();
+        gif.src = e.target.result;
+        gif.onload = function() {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 200;
+          canvas.height = 200;
+          ctx.drawImage(gif, 0, 0, 200, 200);
+
+          const preview = document.createElement('div');
+          preview.className = 'preview';
+          preview.style.backgroundImage = `url(${canvas.toDataURL()})`;
+
+          const quadrado = document.querySelector('.quadrado');
+          quadrado.innerHTML = '';
+          quadrado.appendChild(preview);
+        };
+      };
+
+      reader.readAsDataURL(file);
     }
   };
 
