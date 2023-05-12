@@ -89,6 +89,8 @@
     margin-top: 20px;
     max-height: 200px;
     overflow-y: auto;
+    display: none; /* Oculta o elemento por padrão */
+    display: block; /* Exibe o elemento apenas em dispositivos móveis */
   }
   footer{
     background-color: black;
