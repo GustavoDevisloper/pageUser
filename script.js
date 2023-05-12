@@ -1,28 +1,30 @@
 function adicionarImagem() {
-    var input = document.createElement('input');
-    input.type = 'file';
-  
-    input.onchange = function(e) {
-      var file = e.target.files[0];
-  
-      if (file && file.type.startsWith('image/')) {
-        var reader = new FileReader();
-  
-        reader.onload = function(e) {
-          var url = e.target.result;
-  
-          var imagem = document.createElement('img');
-          imagem.src = url;
-  
-          var quadrado = document.querySelector('.quadrado');
-          quadrado.innerHTML = '';
-          quadrado.appendChild(imagem);
-        };
-  
-        reader.readAsDataURL(file);
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*, video/*';
+  input.onchange = function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const preview = document.createElement('div');
+      preview.className = 'preview';
+
+      if (file.type.includes('image')) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        preview.appendChild(img);
+      } else if (file.type.includes('video')) {
+        const video = document.createElement('video');
+        video.src = e.target.result;
+        video.controls = true;
+        preview.appendChild(video);
       }
+
+      document.body.appendChild(preview);
     };
-  
-    input.click();
+
+    reader.readAsDataURL(file);
+  };
+
+  input.click();
 }
-  
