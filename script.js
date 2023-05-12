@@ -11,9 +11,15 @@ function adicionarImagem() {
         const img = new Image();
         img.src = e.target.result;
         img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 200;
+          canvas.height = 200;
+          ctx.drawImage(img, 0, 0, 200, 200);
+
           const preview = document.createElement('div');
           preview.className = 'preview';
-          preview.style.backgroundImage = `url(${img.src})`;
+          preview.style.backgroundImage = `url(${canvas.toDataURL()})`;
 
           const quadrado = document.querySelector('.quadrado');
           quadrado.innerHTML = '';
