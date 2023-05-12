@@ -1,6 +1,4 @@
-@media only screen and (max-width: 600px) {
 
-}
 @font-face {
     font-family: 'Roboto';
     src: url('./assets/fonts/Roboto.ttf') format('truetype');
@@ -81,9 +79,8 @@
     background-color: #888;
     border-radius: 5px;
   }
-  @media (max-width: 767px){
 
-  }
+  
   .hab{
     position: absolute;
     top: 353px;
@@ -97,6 +94,16 @@
     flex-direction: column;
     overflow: auto;
 
+  }
+  @media (max-width: 767px) {
+    .sobremim {
+      order: 1;
+    }
+  
+    .hab {
+      order: 2;
+      margin-top: 20px;
+    }
   }
   .hab::-webkit-scrollbar {
     width: 10px;
