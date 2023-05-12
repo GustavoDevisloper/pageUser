@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+    overflow: hidden;
+  }
+  header{
+    background-color: black;
+    color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+  }
+  
+  h1 {
+    padding-top: 20px;  
+    font-family: 'Roboto';
+    
+  }
+.quadrado {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Roboto';
+    cursor: pointer;
+  }
+  .quadrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .nomeprin{
+    position: absolute;
+    left: 220px;
+    top: 65px;
+  }
+  .sobremim {
+    width:900px;
+    height: 300px;
+    margin: 20px;
+    overflow: auto;
+    font-family: 'Roboto';
+
+  }
+  .sobremim::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+  }
+
+  .sobremim::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .sobremim::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  .hab{
+    position: absolute;
+    top: 353px;
+    left: 1000px;
+    font-family: 'Roboto';
+  }
+  footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Roboto';
+  }
