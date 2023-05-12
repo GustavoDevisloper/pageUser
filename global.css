@@ -1,3 +1,6 @@
+@media only screen and (max-width: 600px) {
+
+}
 @font-face {
     font-family: 'Roboto';
     src: url('./assets/fonts/Roboto.ttf') format('truetype');
@@ -6,6 +9,8 @@
   }
   body{
     overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
   header{
     background-color: black;
@@ -16,6 +21,7 @@
   }
   
   h1 {
+    margin: 0;
     padding-top: 20px;  
     font-family: 'Roboto';
     
@@ -42,6 +48,7 @@
     position: absolute;
     left: 220px;
     top: 65px;
+    text-align: center;
   }
   .sobremim {
     width:900px;
@@ -74,7 +81,7 @@
   footer{
     background-color: black;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
     font-family: 'Roboto';
   }
