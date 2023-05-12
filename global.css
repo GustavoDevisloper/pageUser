@@ -56,6 +56,7 @@
     margin: 20px;
     overflow: auto;
     font-family: 'Roboto';
+    margin-bottom: 20px;
 
   }
   .sobremim::-webkit-scrollbar {
@@ -77,6 +78,7 @@
     top: 353px;
     left: 1000px;
     font-family: 'Roboto';
+    margin-top: 20px;
   }
   footer{
     background-color: black;
